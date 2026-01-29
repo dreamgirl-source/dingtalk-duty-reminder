@@ -2,7 +2,7 @@ name: DingTalk Duty Reminder
 
 on:
   schedule:
-    - cron: '0 2 * * *'   # 北京时间 10:00（UTC+8）
+    - cron: '25 2 * * *'   # 北京时间 10:00（UTC+8）
   workflow_dispatch:
 
 jobs:
