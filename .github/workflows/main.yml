@@ -2,7 +2,7 @@ name: DingTalk Duty Reminder
 
 on:
   schedule:
-    - cron: '48 2 * * *'   # 北京时间 10:00（UTC+8）
+    - cron: '55 2 * * *'   # 北京时间 11:00（UTC+8）
   workflow_dispatch:
 
 jobs:
@@ -25,3 +25,6 @@ jobs:
       - name: Run duty reminder
         run: |
           python duty_reminder.py
+        env:
+          WEBHOOK: ${{ secrets.WEBHOOK }}
+          SECRET: ${{ secrets.SECRET }}
